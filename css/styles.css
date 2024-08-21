@@ -318,9 +318,6 @@ p {
 }
 
 /* Contacto */
-.contacto {
-    height: 100vh;
-}
 .formulario {
     background-color: var(--gris);
     width: min(60rem, 100%);
@@ -417,6 +414,7 @@ p {
 .campo textarea {
     height: 14em;
     resize: none;
+    scroll-snap-type: none;
 }
 @media only screen and (min-width: 480px) {
     .campo textarea {
