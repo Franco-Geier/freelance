@@ -310,20 +310,17 @@ p {
         width: 10rem;
     }
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
     .servicio .iconos {
         height: 11rem;
         width: 11rem;
     }
 }
-@media only screen and (min-width: 768px) {
-    .servicio .iconos {
-        height: 12rem;
-        width: 12rem;
-    }
-}
 
 /* Contacto */
+.contacto {
+    height: 100vh;
+}
 .formulario {
     background-color: var(--gris);
     width: min(60rem, 100%);
