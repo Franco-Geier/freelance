@@ -318,9 +318,6 @@ p {
 }
 
 /* Contacto */ 
-.contacto {
-    scroll-snap-stop: none;
-}
 .formulario {
     background-color: var(--gris);
     width: min(60rem, 100%);
