@@ -15,8 +15,7 @@ html {
 /* Scroll snap */
 .navegacion-principal,
 .servicios-scroll,
-.contacto,
-.campo-text {
+.contacto {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
@@ -318,7 +317,10 @@ p {
     }
 }
 
-/* Contacto */
+/* Contacto */ 
+.contacto {
+    scroll-snap-stop: none;
+}
 .formulario {
     background-color: var(--gris);
     width: min(60rem, 100%);
