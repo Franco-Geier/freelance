@@ -1,42 +1,50 @@
 "use strict";
 
 const textarea = document.querySelector('textarea');
-const htmlElement = document.documentElement;
+const elementoHtml = document.documentElement;
 
-// Desactiva el scroll-snap al interactuar con el textarea
+let esHorizontal = false;
+
 textarea.addEventListener('focus', function() {
-    disableScrollSnap();
-    adjustTextareaHeight();
+    desactivarScrollSnap();
+    ajustarAlturaTextArea();
 });
 
 textarea.addEventListener('input', function() {
-    adjustTextareaHeight();
+    ajustarAlturaTextArea();
 });
 
-// Rehabilita el scroll-snap cuando el usuario termina de interactuar
 textarea.addEventListener('blur', function() {
-    enableScrollSnap();
+    activarScrollSnap();
 });
 
-// Maneja el cambio de orientación en el dispositivo
+
 window.addEventListener('orientationchange', function() {
-    // Reajusta la altura cuando cambie la orientación
-    adjustTextareaHeight();
+    checkOrientacion();
+    ajustarAlturaTextArea();
 });
 
-// Función para deshabilitar el scroll-snap en todo el documento
-function disableScrollSnap() {
-    htmlElement.style.scrollSnapType = 'none';
+
+function desactivarScrollSnap() {
+    elementoHtml.style.scrollSnapType = 'none';
 }
 
-// Función para habilitar el scroll-snap en todo el documento
-function enableScrollSnap() {
-    htmlElement.style.scrollSnapType = 'y mandatory';
+
+function activarScrollSnap() {
+    elementoHtml.style.scrollSnapType = 'y mandatory';
 }
 
-// Ajusta la altura del textarea dinámicamente
-function adjustTextareaHeight() {
+
+function checkOrientacion() {
+    esHorizontal = window.innerWidth > window.innerHeight;
+}
+
+function ajustarAlturaTextArea() {
     textarea.style.height = 'auto';
     textarea.style.height = textarea.scrollHeight + 'px';
-    textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (!esHorizontal) {
+        textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
 }
+
+checkOrientacion();
