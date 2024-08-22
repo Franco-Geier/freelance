@@ -13,8 +13,8 @@ html {
     scroll-snap-type: y mandatory;
 }
 /* Scroll snap */
+.navegacion-principal,
 .servicios-scroll,
-.navegacion-principal, 
 .contacto {
     scroll-snap-align: center;
     scroll-snap-stop: always;
@@ -412,9 +412,8 @@ p {
     }
 }
 .campo textarea {
-    height: 14em;
+    height: 14rem;
     resize: none;
-    scroll-snap-type: none;
 }
 @media only screen and (min-width: 480px) {
     .campo textarea {
