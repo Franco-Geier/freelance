@@ -13,12 +13,12 @@ html {
     scroll-snap-type: y mandatory;
 }
 /* Scroll snap */
-.navegacion-principal,
+/* .navegacion-principal,
 .servicios-scroll,
 .contacto {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+} */
 body{
     font-size: 16px;
     font-family: "Krub", sans-serif;
