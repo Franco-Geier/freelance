@@ -413,28 +413,10 @@ p {
     }
 }
 .campo textarea {
-    height: 14rem;
-    resize: none;
-}
-@media only screen and (min-width: 480px) {
-    .campo textarea {
-        height: 16rem;
-    }
-}
-@media only screen and (min-width: 576px) {
-    .campo textarea {
-        height: 18rem;
-    }
-}
-@media only screen and (min-width: 768px) {
-    .campo textarea {
-        height: 20rem;
-    }
-}
-@media only screen and (min-width: 768px) {
-    .boton.w-sm-100 {
-        margin-top: 3.6rem;
-    }
+    resize: vertical;
+    overflow-y: auto;
+    min-height: 14rem;
+    max-height: 19rem;
 }
 
 /* Footer */
