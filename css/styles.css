@@ -119,13 +119,16 @@ h1, h2, h3 {
 
 /* Hero */
 .hero {
-    background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: clamp(30rem, 10vw + 30rem, 50rem);
     position: relative;
     margin-bottom: 2rem;
     background-position: center center;
+    background-image: image-set(
+        url(../img/hero.webp) 1x,
+        url(../img/hero.jpg) 1x
+    );
 }
 .contenido-hero {
     position: absolute;

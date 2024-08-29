@@ -1,0 +1,8 @@
+/css/styles.css
+  Cache-Control: max-age=2592000
+
+/js/script.js
+  Cache-Control: max-age=2592000
+
+/img/hero.jpg
+  Cache-Control: max-age=2592000
