@@ -4,5 +4,5 @@
 /js/script.js
   Cache-Control: max-age=2592000
 
-/img/hero.jpg
-  Cache-Control: max-age=2592000
+/img/*
+  Cache-Control: max-age=31536000
