@@ -88,6 +88,11 @@ h1, h2, h3 {
     text-align: center;
 }
 
+/* Titulo */
+.titulo span {
+    font-size: clamp(1.4rem, 0.5vw + 1rem, 2rem);
+}
+
 /* Navegación principal*/
 .navegacion-principal {
     display: flex;
